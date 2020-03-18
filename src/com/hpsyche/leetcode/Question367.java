@@ -16,8 +16,4 @@ public class Question367 {
         }
         return false;
     }
-
-
-
-
 }
