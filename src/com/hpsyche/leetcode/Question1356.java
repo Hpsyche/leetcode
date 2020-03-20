@@ -15,18 +15,30 @@ public class Question1356 {
         for(int i=0;i<arr.length;i++){
             temp[i]=arr[i];
         }
-        Arrays.sort(temp, new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                int i1 = Integer.bitCount(o1);
-                int i2 = Integer.bitCount(o2);
-                return i1==i2?o1-o2:i1-i2;
-            }
+        Arrays.sort(temp, (o1, o2) -> {
+            int i1 = Integer.bitCount(o1);
+            int i2 = Integer.bitCount(o2);
+            return i1==i2?o1-o2:i1-i2;
         });
         for(int i=0;i<arr.length;i++){
             arr[i]=temp[i];
         }
         return arr;
+    }
+
+    public void insertSort(int[] arr){
+        if(arr.length<2){
+            return;
+        }
+        for(int i=0;i<arr.length-1;i++){
+            int curr=arr[i+1];
+            int index=i;
+            while (index>=0&&curr<arr[index]){
+                arr[curr+1]=arr[curr];
+                index--;
+            }
+            arr[index+1]=curr;
+        }
     }
 
     private void swap(int[] arr, int i, int j) {
