@@ -5,8 +5,13 @@ import org.junit.Test;
 /**
  * @author hpsyche
  * Create on 2020/3/26
+ * 另一种方式：
+ * 通过list
+ * 1.初始化时存入空string
+ * 2.遍历s，获取当前的rowNum，在list的index中，将string append s.charAt(i)
  */
 public class Question6 {
+
     public String convert(String s, int numRows) {
         int numCols=getCols(s.length(),numRows);
         char[][] res=new char[numRows][numCols];
