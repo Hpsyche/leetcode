@@ -1,4 +1,4 @@
-package com.hpsyche.leetcode;
+package com.hpsyche.leetcode.questions;
 
 /**
  * @author hpsyche

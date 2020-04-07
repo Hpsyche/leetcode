@@ -1,4 +1,4 @@
-package com.hpsyche.leetcode;
+package com.hpsyche.leetcode.questions;
 
 import org.junit.Test;
 
