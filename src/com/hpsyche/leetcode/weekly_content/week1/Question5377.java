@@ -1,4 +1,4 @@
-package com.hpsyche.leetcode.weekly_content;
+package com.hpsyche.leetcode.weekly_content.week1;
 
 import org.junit.Test;
 
