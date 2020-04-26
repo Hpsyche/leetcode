@@ -1,5 +1,7 @@
 package com.hpsyche.leetcode.questions.question1_100;
 
+import org.junit.Test;
+
 /**
  * @author hpsyche
  * Create on 2020/4/17
@@ -9,7 +11,6 @@ public class Question33 {
         int len=nums.length;
         int left=0;
         int right=len-1;
-        int[] res=new int[2];
         while (left<=right){
             int mid=(left+right)>>1;
             if(nums[mid]==target){
@@ -29,5 +30,10 @@ public class Question33 {
             }
         }
         return -1;
+    }
+
+    @Test
+    public void test1(){
+        System.out.println(search(new int[]{3,5,1},3));
     }
 }
