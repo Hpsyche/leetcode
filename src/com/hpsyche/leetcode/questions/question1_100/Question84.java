@@ -38,6 +38,6 @@ public class Question84 {
 
     @Test
     public void test(){
-        System.out.println(largestRectangleArea2(new int[]{6,7,5,2,4,5,9,3}));;
+        System.out.println(largestRectangleArea2(new int[]{1,2,3,4,5,6}));;
     }
 }
