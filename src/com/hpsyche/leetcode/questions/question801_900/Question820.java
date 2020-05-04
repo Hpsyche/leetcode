@@ -9,7 +9,6 @@ import java.util.*;
 public class Question820 {
     /**
      * 解法1
-     *
      * @param words
      * @return
      */
@@ -44,6 +43,8 @@ public class Question820 {
        }
        int res=0;
        for(TrieTree trieTree:map.keySet()){
+           //字典树的叶子节点（没有孩子的节点）就代表没有后缀的单词，
+           // 统计叶子节点代表的单词长度加一的和即为我们要的答案。
            if(trieTree.count==0){
                res+=map.get(trieTree)+1;
            }
