@@ -24,6 +24,7 @@ public class Question14 {
         String[] str=new String[]{
                 "flower","flow","flight"
         };
+        longestCommonPrefix(str);
         System.out.println(longestCommonPrefix(str));
 //        System.out.println("flight".indexOf("flow"));
     }
