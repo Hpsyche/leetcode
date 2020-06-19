@@ -46,6 +46,6 @@ public class Question304 {
                 System.out.print(i+" ");
             }
             System.out.println();
-        };
+        }
     }
 }
