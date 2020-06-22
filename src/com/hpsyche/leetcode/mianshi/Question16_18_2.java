@@ -19,11 +19,10 @@ public class Question16_18_2 {
         if (value.length() == 0) {
             boolean aExist = false;
             boolean bExist = false;
-            for (char c: pChars) {
+            for (char c : pChars) {
                 if (c == 'a') {
                     aExist = true;
-                }
-                else {
+                } else {
                     bExist = true;
                 }
                 if (aExist && bExist) {
@@ -35,12 +34,11 @@ public class Question16_18_2 {
         // 计算pattern里a和b的个数
         int countA = 0;
         int countB = 0;
-        for (char c: pChars) {
+        for (char c : pChars) {
             if (c == 'a') {
-                countA ++;
-            }
-            else {
-                countB ++;
+                countA++;
+            } else {
+                countB++;
             }
         }
         int lenV = vChars.length;
@@ -49,8 +47,7 @@ public class Question16_18_2 {
             int count = countA + countB;
             if (lenV % count != 0) {
                 return false;
-            }
-            else {
+            } else {
                 int len = lenV / count;
                 for (int i = len; i < lenV; i += len) {
                     if (!stringEquals(vChars, 0, i, len)) {
@@ -61,7 +58,7 @@ public class Question16_18_2 {
             }
         }
         // i代表a字符串的长度
-        for (int i = 0; i <= lenV; i ++) {
+        for (int i = 0; i <= lenV; i++) {
             // a字符串过长就break
             if (lenV - countA * i < 0) {
                 break;
@@ -75,12 +72,11 @@ public class Question16_18_2 {
                 ab[0] = -1;
                 ab[1] = -1;
                 boolean notMatch = false;
-                for (char c: pChars) {
+                for (char c : pChars) {
                     if (c == 'a') {
                         if (ab[0] == -1) {
                             ab[0] = index;
-                        }
-                        else {
+                        } else {
                             // 每次为a都和初始的字符串比较
                             if (!stringEquals(vChars, ab[0], index, i)) {
                                 notMatch = true;
@@ -88,12 +84,10 @@ public class Question16_18_2 {
                             }
                         }
                         index += i;
-                    }
-                    else {
+                    } else {
                         if (ab[1] == -1) {
                             ab[1] = index;
-                        }
-                        else {
+                        } else {
                             if (!stringEquals(vChars, ab[1], index, lenB)) {
                                 notMatch = true;
                                 break;
@@ -122,8 +116,8 @@ public class Question16_18_2 {
 
     // 判断字符串是否相等
     private boolean stringEquals(char[] chars, int i, int j, int len) {
-        for (int k = 0; k < len; k ++) {
-            if (chars[i+k] != chars[j+k]) {
+        for (int k = 0; k < len; k++) {
+            if (chars[i + k] != chars[j + k]) {
                 return false;
             }
         }
