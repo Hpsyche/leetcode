@@ -17,12 +17,12 @@ public class Question139 {
         int len=s.length();
         boolean[] dp=new boolean[len];
         for(int r=0;r<len;r++){
-            if(wordDict.contains(s.substring(0,r+1))){
+            if(set.contains(s.substring(0,r+1))){
                 dp[r]=true;
                 continue;
             }
             for(int l=0;l<r;l++){
-                if(dp[l]&&wordDict.contains(s.substring(l+1,r+1))){
+                if(dp[l]&&set.contains(s.substring(l+1,r+1))){
                     dp[r]=true;
                     break;
                 }
